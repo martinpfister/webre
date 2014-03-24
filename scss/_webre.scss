@@ -55,7 +55,25 @@ header {
 		border-left: 1px solid #e6e6e6;
 		padding: 5px 20px;
 		height: 100%;
+		.arrow-down {
+			float: left;
+			width: 30px;
+			height: 100%;
+			padding-top: 16px;
+			a {
+				height: 16px;
+		  		width: 16px;
+		  		display: block;
+			}
+			svg {
+		  		height: 16px;
+		  		width: 16px;
+		  		background-repeat:no-repeat;
+		  		display:block;
+				fill: $dunkelgrau;
+			}
 
+		}
 		.welcome {
 			float: right;
 			margin-right: 5px;
@@ -83,7 +101,7 @@ header {
 			margin-bottom: 0;
 			color: $dunkelgrau;
 		}
-}
+	}
 
 }
 
@@ -182,16 +200,6 @@ header {
 	}
 	.gridster.ready li {
 		background: $hellgrau;
-	}
-
-	#toolbox {
-		position: absolute;
-		right: 0;
-		top: 90px;
-		display: none;
-		height: 610px;
-		width: 300px;
-		background: $dunkelgrau;
 	}
 }
 
@@ -314,3 +322,66 @@ header {
 /*----------------------------------------------------------------------------------------------------------*/
 /* Footer
 /*----------------------------------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------------------------------*/
+/* Aside - Bar
+/*----------------------------------------------------------------------------------------------------------*/
+
+#toolbox {
+	position: absolute;
+	right: 20px;
+	top: 90px;
+	display: none;
+	height: 590px;
+	width: 300px;
+	background: $dunkelgrau;
+    span.close {
+        position: absolute;
+        display: block;
+        padding: 4px;
+        height: 16px;
+        width: 16px;
+        top: 6px; right: 5px;
+        color: #fff;
+        z-index: 10;
+
+        &:hover {
+        	cursor: pointer;
+        }
+
+    }
+	svg {
+  		height: 16px;
+  		width: 16px;
+  		background-repeat:no-repeat;
+  		display:block;
+		fill: #fff;
+		position: absolute;
+		top: 0; left: 0;
+	}
+
+	/* Elemente */
+	h3 {
+		color: $hellgrau;
+	}
+	label {
+		color: #fff;
+	}
+	/*span {
+		display: block;
+		width: 45%;
+		float: left;
+		font-size: 14px;
+		padding-top: 5px;
+	}
+	input, select {
+		width: 55%;
+		background: $hellgrau;
+		color: $dunkelgrau;
+	}
+	input {
+		padding: 2px;
+	}
+	*/
+}
+

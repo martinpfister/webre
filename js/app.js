@@ -31,9 +31,9 @@ $( document ).ready(function() {
     widgets['platzhalter']  = '<div class="widget platzhalter"><p>Ein Platzhalter Text</p></div>';
     widgets['buttonwidget'] = '<div class="widget input"><input type="submit"></div>';
     widgets['eingabefeld']  = '<div class="widget eingabefeld">\
-                               <label for="email">E-mail adress</label>\
-                               <input type="text" name="email" id="email" placeholder="Enter your e-mail">\
-                                </div>';
+                                <label for="email">E-mail adress</label>\
+                                <input type="text" name="email" id="email" placeholder="Enter your e-mail">\
+                               </div>';
     widgets['radiobutton']  = ' <div class="widget radiobutton">\
                                   <input type="radio"><input type="radio">\
                                 </div>';
@@ -53,7 +53,7 @@ $( document ).ready(function() {
           autogrow_cols: false,
           widget_base_dimensions: [120, 40],
           min_rows: 3,
-          max_cols: 6,
+          max_cols: 12,
           resize: {
             enabled: true,
             min_size: [2, 2]
@@ -61,13 +61,13 @@ $( document ).ready(function() {
     }).data('gridster');
 
     $(document).on( "click", ".delete", function() {
-        console.log('delete');
         gridster.remove_widget( $(this).parent() );
     });
     $(document).on( "click", ".edit", function(e) {
-        console.log('edit');
-
         $('#toolbox').fadeIn();
+    });
+    $(document).on( "click", ".close", function() {
+        $('#toolbox').fadeOut();
     });
 
 
@@ -81,7 +81,7 @@ $( document ).ready(function() {
                                               '</li>',
                                                6, 2, 1, 1, null,null,
                                                 function() {
-                                                    console.log('33324233');
+                                                    //console.log('33324233');
                                                 }
                                               ]);
      });
